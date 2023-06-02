@@ -2,7 +2,6 @@
 variable "sample" {
   default = 10
 }
-
 output "sample" {
   value = var.sample
 }
@@ -12,7 +11,6 @@ variable "sample1" {
   100,"abc","xyz"
   ]
 }
-
 output "sample1" {
   value = var.sample1[1]
 }
@@ -24,7 +22,6 @@ variable "sample2" {
     boolean = false
   }
 }
-
 output "sample2" {
   value = var.sample2["number"]
 }
