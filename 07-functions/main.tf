@@ -10,3 +10,6 @@ resource "aws_instance" "web" {
     Name = "test-centos8"
   }
 }
+output "instance_profile" {
+  value = aws_instance.web.outpost_arn
+}
