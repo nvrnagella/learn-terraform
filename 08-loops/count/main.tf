@@ -12,5 +12,5 @@ data "aws_ami" "centos8" {
   name_regex = "Centos-8-DevOps-Practice"
 }
 output "publicip" {
-  value = aws_instance.web.public_ip
+  value = aws_instance.web.*.public_ip
 }
