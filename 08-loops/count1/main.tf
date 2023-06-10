@@ -6,7 +6,25 @@ resource "aws_instance" "web" {
     Name = var.components
   }
 }
+
 data "aws_ami" "centos8" {
 
   owners = []
+}
+
+variable "components" {
+  default = {
+    cart = {
+      name = "cart",
+      instance_type = "t3.small"
+    }
+    catalogue = {
+      name = "catalogue"
+      instance_type = "t3.micro"
+    }
+  }
+}
+
+output "publicip" {
+  value = ""
 }
