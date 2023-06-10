@@ -20,7 +20,7 @@ variable "components" {
       instance_type = "t3.small"
     }
     catalogue = {
-      name = "catalogue"
+      name = "catalogue",
       instance_type = "t3.micro"
     }
   }
