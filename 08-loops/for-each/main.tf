@@ -26,6 +26,6 @@ variable "components" {
   }
 }
 
-output "publicip" {
-  value = aws_instance.web.*.public_ip
-}
+#output "publicip" {
+#  value = aws_instance.web.*.public_ip
+#}
