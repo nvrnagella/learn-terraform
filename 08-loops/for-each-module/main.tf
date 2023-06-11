@@ -19,5 +19,7 @@ module "ec2" {
 }
 #i want to print all the output of a module after module itself
 output "publicip" {
-  value = module.ec2
+  value = {
+    for k, v in module.ec2 : k => v["ec2"].public_ip
+  }
 }
