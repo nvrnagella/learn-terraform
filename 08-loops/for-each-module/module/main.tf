@@ -16,7 +16,9 @@ data "aws_ami" "centos8" {
 variable "name" {}
 variable "instance_type" {}
 
-
+output "ec2" {
+  value = aws_instance.web
+}
 #output "publicip" {
 #  value = {
 #    for k, v in aws_instance.web : k=> v.public_ip
