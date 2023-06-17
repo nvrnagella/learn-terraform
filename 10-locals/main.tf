@@ -1,7 +1,7 @@
 variable "components" {
   default = {
     cart = {
-      name = cart,
+      name = "cart",
       instance_type = "t3.small"
     }
     catalogue = {
