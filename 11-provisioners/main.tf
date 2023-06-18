@@ -15,6 +15,9 @@ resource "aws_instance" "web" {
   }
 }
 resource "null_resource" "provision" {
+  triggers = {
+    instance_id = aws_instance.web.id
+  }
   provisioner "remote-exec" {
     connection {
       host = aws_instance.web.public_ip
