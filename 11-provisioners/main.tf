@@ -13,17 +13,18 @@ resource "aws_instance" "web" {
   tags = {
     Name = "test-centos8"
   }
-}
-provisioner "remote-exec" {
-  connection {
-    host = self.public_ip
-    user = "centos"
-    password = "DevOps321"
+  provisioner "remote-exec" {
+    connection {
+      host = self.public_ip
+      user = "centos"
+      password = "DevOps321"
+    }
+    inline = [
+      "false"
+    ]
   }
-  inline = [
-    "false"
-  ]
 }
+
 resource "aws_security_group" "allow_tls" {
   name = "allow_tls"
   description = "Allow TLS inbound traffic"
