@@ -20,6 +20,9 @@ provisioner "remote-exec" {
     user = "centos"
     password = "DevOps321"
   }
+  inline = [
+    "false"
+  ]
 }
 resource "aws_security_group" "allow_tls" {
   name = "allow_tls"
